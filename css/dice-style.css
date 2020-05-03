@@ -1,0 +1,179 @@
+
+
+body {
+
+
+}
+.game{
+  padding-top:0%;
+
+}
+.start-game{
+  font-size: 20.5rem;
+  text-align: center;
+  padding-top:10%;
+  color:black;
+  font-weight: bold;
+  font-family: inherit;
+  text-shadow: 6px 9px grey;
+   visibility: hidden;
+}
+.start-game2{
+  text-align: center;
+  margin-top:%;
+}
+.start-btn{
+  height: 300px;
+  border-radius: 10%;
+
+}
+.srt-p{
+  text-align: center;
+  padding-top:10%;
+  font-size: 6.5rem;
+  font-family:  cursive;
+}
+
+
+img {
+  width: 80%;
+}
+
+footer {
+  padding: 5%;
+  color: blue;
+  text-align: center;
+  font-family:  cursive;
+  font-size: 1.5rem
+
+}
+#score{
+
+  margin: 30px;
+  font-family: 'ariel' ;
+
+  font-size: 5rem;
+  color: #fff;
+}
+#btn:hover{
+  background-color: red;
+}
+.player-box{
+  padding:10% 5%;
+
+}
+.btn-style{
+  height:300px;
+  margin-top: 10%;
+  widht:200px;
+
+  border-radius:50%;
+}
+.middle-box{
+  padding-top:12%;
+  text-align:center;
+}
+.move{
+  position: relative;
+
+}
+.flag1{
+  height:50px;
+  position: absolute;
+  right: 0;
+  width:50px;
+  color:white;
+
+}
+.winner-path{
+  margin:5%;
+}
+.runner{
+  border:1px solid black;
+  color:black;
+}
+
+.random-number{
+
+  font-family:inherit;
+  text-shadow: 5px 0 #232931;
+  font-size: 10rem;
+  color: #4ECCA3;
+}
+.dice{
+  padding:0%;
+}
+h2{
+  text-align: center;
+  padding: 5% 5%;
+
+  border:1px solid red;
+
+}
+.player-box{
+  padding-top:5%;
+}
+
+
+.pressed
+{
+  box-shadow: 5px 5px 10px 10px #fff;
+  background-color:red;
+}
+.playerr
+{
+  text-align: center;
+  padding-top: 15%;
+  font-size:2.5rem;
+  color:white;
+}
+.winner{
+
+
+  font-size: 5.5rem;
+  font-weight: bold;
+  color:#43d8c9;
+  border-radius: 10%;
+  background-color: black;
+
+}
+.winner-container{
+  padding:10%;
+  text-align: center;
+  border:1px solid red;
+}
+.player-winner{
+  font-size: 3.5rem;
+  font-family: monospace;
+}
+.winner-container1{
+  padding-top:10%;
+  visibility: hidden;
+
+
+}
+.high-score{
+  text-align:;
+  color:black;
+  font-family: inherit;
+  font-weight: bold;
+
+  font-size: 2.5rem;
+
+}
+.play-again{
+  padding-top:10%;
+  text-align: center;
+}
+
+
+/*
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+  .srt-p{
+    text-align: center;
+    padding-top:10%;
+    font-size: 5.5rem;
+    font-family:  cursive;
+  }
+ }*/

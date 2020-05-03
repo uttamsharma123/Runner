@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/dice-style.css">
+
+    <!--css cdn of bootstrap-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+       <!--jquery cdn of bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!--fonts awesome cdn-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+  </head>
+  <body>
+
+    <div class="container remove-started">
+    <div class="row">
+      <div class="col-lg-2 col-md-12 col-sm-12">
+
+      </div>
+      <div class="col-lg-8 col-md-12 col-sm-12 start-game2">
+      <p  class="srt"></p>
+  <div class=" btn-lg btn-block start-btn btn btn-dark "><p class="srt-p">start game</p></div>
+
+      </div>
+      <div class="col-lg-2 col-md-12 col-sm-12">
+
+      </div>
+    </div>
+  </div>
+
+
+<section class="game-started">
+
+    <div class="container game" id="after-win ">
+      <div class="row">
+          <div class="col-lg-4 col-sm-4 col-md-4 player-box">
+            <h2 class="score1">Score: 0</h2>
+           <div  id="button1" class="btn-block btn-lg btn btn-dark btn-style" type="button" name="button"><p class="playerr">player1</p></div>
+          </div>
+          <div class="col-lg-4col-sm-4 col-md-4 middle-box">
+
+
+
+              <h1 class="random-number">0</h1>
+
+
+
+          </div>
+          <div class="col-lg-4 col-sm-4 col-md-4 player-box">
+            <h2  class="score2">Score: 0</h2>
+            <div id="button2"  class=" btn-block btn-lg btn btn-dark player2 btn-style" type="button" name="button"><p class="playerr">player2</p></div>
+
+          </div>
+      </div>
+      <h1 id="score"></h1><br>
+
+
+
+
+
+
+
+<div class="row winner-path">
+  <div class="col-lg-12 runner">
+
+      <i class='fas fa-running runner1' style='font-size:48px;'></i>
+      <img class="flag1" src="images/flag.gif" alt="">
+  </div>
+</div>
+
+<div class="row winner-path">
+  <div class="col-lg-12 runner">
+      <i class='fas fa-running runner2' style='font-size:48px;'></i>
+      <img class="flag1" src="images/flag.gif" alt="">
+  </div>
+</div>
+</div>
+</section>
+<!--winner div tag-->
+<div class="container winner-container1 ">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 winner-container">
+     <p class="high-player1 high-score"></p>
+      <p class="winner1 winner"></p><hr>
+      <p class="player-winner">player-1</p>
+    <hr>
+    </div>
+    <div class="col-lg-6 col-md-6  col-sm-6 winner-container">
+     <p class="high-player2 high-score"></p>
+      <p class="winner2 winner"></p><hr>
+      <p class="player-winner">player-2</p>
+    <hr>
+
+
+    </div>
+
+
+  </div>
+  <div class="row play-again">
+    <div class="col-lg-12 col-md-12  col-sm-12 ">
+      <div class="btn btn-lg btn-dark again-play">
+        Play again
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+
+  </body>
+  <footer>
+    <i style="font-size:0.9rem;">created by:</i> Uttam Sharma
+  </footer>
+</html>
