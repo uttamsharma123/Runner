@@ -73,7 +73,7 @@ $(".start-btn").click(function()
     $(".start-game").text(x);
 
     x++;
-    if(x==11)
+    if(x==7)
     {
       clearInterval(inter);
       $(".start-game").text("start");
