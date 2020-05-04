@@ -94,8 +94,8 @@ $(".start-btn").click(function()
         console.log(Math.floor(rnumber));
         if(rnumber<10)
         {
-        $(document).ready(function(){
-          $('#button1').trigger('click');
+
+
           animatedPressed("button1")
         /*  com1=0;
           randomNumber(com1)
@@ -107,7 +107,7 @@ $(".start-btn").click(function()
 
 
 */
-        });
+        
 
         }
         if(rnumber>10)
