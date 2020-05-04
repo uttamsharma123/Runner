@@ -1,8 +1,8 @@
 
 
 body {
- background-image: url('https://cdnb.artstation.com/p/assets/images/images/007/382/309/large/nastya-friday-game-background-1.jpg?1505758821');
 
+ background-image: url('https://cdnb.artstation.com/p/assets/images/images/007/382/309/large/nastya-friday-game-background-1.jpg?1505758821');
 
 }
 .game{
@@ -25,7 +25,7 @@ body {
 }
 .start-btn{
   height: 300px;
-  border-radius: 10%;
+  border-radius: 20%;
 
 }
 .srt-p{
@@ -68,6 +68,7 @@ footer {
   margin-top: 10%;
   widht:200px;
 
+
   border-radius:50%;
 }
 .middle-box{
@@ -92,6 +93,7 @@ footer {
 .runner{
   border:1px solid black;
   color:black;
+  background-color: white;
 }
 
 .random-number{
@@ -109,6 +111,7 @@ h2{
   padding: 5% 5%;
 
   border:1px solid red;
+  background-color: white;
 
 }
 .player-box{
@@ -125,7 +128,7 @@ h2{
 {
   text-align: center;
   padding-top: 15%;
-  font-size:2.5rem;
+  font-size:4.5rem;
   color:white;
 }
 .winner{
