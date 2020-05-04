@@ -3,38 +3,13 @@
 //start game*/
 
 //random selected button
-function randomPlayerSelected()
-{
-  var a=Math.random();
-  a=a*2
 
-var  selected=Math.floor(a);
-
-
-if(selected==1)
-{
-  $("#button2").fadeIn(100).fadeOut(100).fadeIn(100);
-  $("#button2").addClass("pressed");
-
-
-   window.setTimeout(function(){$("#button2").removeClass("pressed");},1050);
-   console.log("1");
-}
-if(selected==0)
-{
-  $("#button1").fadeIn(100).fadeOut(100).fadeIn(100);
-  $("#button1").addClass("pressed");
-  
-   window.setTimeout(function(){$("#button1").removeClass("pressed");},1050);
-   console.log("0");
-}
-
-
-}
 
 
 //**************************************************//
 //when user will click on start game button then game must be started//
+
+/* ****************************************************************************** */
 
 
 var x=1;
@@ -45,37 +20,8 @@ var audio1 = new Audio("sounds/blue.mp3");
 
 $(".game-started").css("visibility","hidden");
 
-console.log("hh");
-$(".start-btn").click(function()
- {
 
-  $(".start-btn").remove();
-  $(".srt").addClass("start-game")
-  $(".start-game").css("visibility","visible");
 
-   audio.play();
-
-  var inter=window.setInterval(start_game, 500);
-   //window.setTimeout(function(){},150);
-  function start_game() {
-
-    $(".start-game").text(x);
-
-    x++;
-    if(x==11)
-    {
-      clearInterval(inter);
-      $(".start-game").text("start");
-
-      this.setTimeout(function()
-      {
-      $(".remove-started").remove();
-      $(".game-started").css("visibility","visible");},1200)
-      randomPlayerSelected();
-      }
-
-  }
-})
 
 
 //*************************************************************************
@@ -110,7 +56,80 @@ var com2=0;
 
 //88888888888888888888888888888888888888888888888
 
+//* when user will click on start game button the this method will be executed *///
+$(".start-btn").click(function()
+ {
 
+  $(".start-btn").remove();
+  $(".srt").addClass("start-game")
+  $(".start-game").css("visibility","visible");
+
+  audio.play();
+
+  var inter=window.setInterval(start_game, 500);
+   //window.setTimeout(function(){},150);
+  function start_game() {
+
+    $(".start-game").text(x);
+
+    x++;
+    if(x==11)
+    {
+      clearInterval(inter);
+      $(".start-game").text("start");
+
+      this.setTimeout(function()
+      {
+      $(".remove-started").remove();
+      $(".game-started").css("visibility","visible");
+
+      },1200)
+
+//*** oneTimeClickRandom this is random selected button function                **        ***////
+
+      this.setTimeout(function oneTimeClickRandom()
+      {
+
+        rnumber=player1();
+        console.log(Math.floor(rnumber));
+        if(rnumber<10)
+        {
+        $(document).ready(function(){
+          $('#button1').trigger('click');
+          animatedPressed("button1")
+        /*  com1=0;
+          randomNumber(com1)
+          $("h2.score1").text("Score: "+com1);
+          $("i.runner1").css("left",com1+"%");
+
+          $("h2.score2").text("Score: "+com1);
+          $("i.runner2").css("left",com1+"%");
+
+
+*/
+        });
+
+        }
+        if(rnumber>10)
+        {
+          $(document).ready(function(){
+            $('#button2').trigger('click');
+            animatedPressed("button2")});
+            com2=player2();
+            randomNumber(com2)
+            $("h2.score2").text("Score: "+com2);
+            $("i.runner2").css("left",com2+"%");
+        }
+      },2000)
+
+
+//* end of Random slected function oneTimeClickRandom*/
+
+
+      }
+
+  }
+});
 
 
 
@@ -119,13 +138,46 @@ var com2=0;
 
 //********************************************************
 
+document.getElementById("button2").disabled = true;
 
 
 ///this that function when user click any one of the button the that will be declared winnner
-$("div.btn").click(function(){
+$("button.btn").click(function(){
 var press=$(this).attr("id");
 if(press=="button1")
 {
+
+
+
+
+//when user will click on "You" then computer button will be clicked automtically
+ window.setTimeout(function(){
+
+    document.getElementById("button2").disabled = false;
+    $(document).ready(function(){
+
+      $('#button2').trigger('click');
+      animatedPressed("button2")
+      audio2.play();
+      console.log("value2="+ com2);
+
+      var value2=player2();
+      com2=com2+value2;
+     //for random number code put below
+      randomNumber(value2)
+      $("h2.score2").text("Score: "+com2);
+      $("i.runner2").css("left",com2+"%");
+    });
+
+
+
+
+  },1150);
+
+//** end of button2 function****////
+
+
+document.getElementById("button2").disabled = true;
 
    animatedPressed(press);
      audio1.play();
@@ -133,29 +185,18 @@ if(press=="button1")
    var value1=player1();
    com1=com1+value1;
 
-   $("h2.score1").text("Score: "+com1);
+$("h2.score1").text("Score: "+com1);
 
    //for random number code put below
    randomNumber(value1)
 
-   $("i.runner1").css("left",com1+"%");
+$("i.runner1").css("left",com1+"%");
+
 }
 
 
 if(press=="button2")
 {
-
-  animatedPressed(press)
-  audio2.play();
-  console.log("value2="+ com2);
-
-  var value2=player2();
-  com2=com2+value2;
- //for random number code put below
-  randomNumber(value2)
-  $("h2.score2").text("Score: "+com2);
-  $("i.runner2").css("left",com2+"%");
-
 
 }
 
@@ -167,6 +208,7 @@ if(com1>100 && com1>com2)
 
   com1=0;
   $("h2.score1").text("Score: "+com1);
+
   $("i.runner1").removeClass("move");
   $("section.game-started").remove();
   $(".add").addClass(".winner-container");
@@ -211,8 +253,8 @@ this.setTimeout(function(){$("h1.random-number").text("0");},1200)
 function animatedPressed(buttonPressed)
  {
   $("#"+buttonPressed).fadeIn(100).fadeOut(100).fadeIn(100);
-  $("div#"+buttonPressed).addClass("pressed");
-   window.setTimeout(function(){$("div#"+buttonPressed).removeClass("pressed");},150);
+  $("#"+buttonPressed).addClass("pressed");
+   window.setTimeout(function(){$("#"+buttonPressed).removeClass("pressed");},150);
  }
 function winnerFun()
 {
