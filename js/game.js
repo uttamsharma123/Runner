@@ -213,7 +213,7 @@ if(com1>100 && com1>com2)
   $("section.game-started").remove();
   $(".add").addClass(".winner-container");
   $(".winner-container1").css("visibility","visible")
-  $(".winner1").text("winner");
+  $(".winner1").text("won");
   $(".winner2").text("lose");
 
   window.setInterval(winnerFun, 1000)
@@ -230,7 +230,7 @@ $(".high-player1").text("High-Score: "+com1);
 
 $(".winner-container1").css("visibility","visible")
 $(".winner1").text("lose");
-$(".winner2").text("winner");
+$(".winner2").text("won");
 
 
   window.setInterval(winnerFun, 1000)
